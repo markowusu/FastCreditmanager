@@ -1,0 +1,28 @@
+{%extends 'creditApp/base.html'%}
+
+{% block content %}
+<div class="jumbotron  bg-light " style="border-radius: 30px;padding: 0px 20px 0px 20px; margin: -1% 15% 0% 15% ;">
+<table class="table" style="padding-top: 20px;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">From</th>
+        <th scope="col">Transfered To</th>
+        <th scope="col">Credit Transfered</th>
+        <th scope="col"> Date </th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for transact in transact_details %}
+      <tr class="text-dark lead">
+        <th scope="row" class=" badge badge-pill badge-dark ">{{transact.id}}</th>
+        <td>{{transact.Transfer_from.username}}</td>
+        <td>{{transact.Transfer_to.username}}</td>
+        <td>{{transact.credit}}</td>
+        <td>{{ transact.date}}</td>
+      </tr>
+      {%endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

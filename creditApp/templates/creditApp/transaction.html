@@ -1,0 +1,24 @@
+{% extends 'creditApp/base.html'%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+<div class="jumbotron bg-dark mr-4 ml-4 rounded-circle transact-bg" >
+    <div class="row">
+        <div class="col-8">
+ <form  style="margin: 1% -15% 0% 50%;"  action=''  method="POST">
+     {%csrf_token%}
+      {{form|crispy}} 
+      {% for error in form.error %}
+      <p class="text-danger">{{error}}</p>
+      {%endfor %}
+      <button type="submit" class="btn btn-ms btn-primary btn-outline-light badge-pill " >Submit</button>
+    </form>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}

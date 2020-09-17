@@ -1,0 +1,19 @@
+{% extends 'creditApp/base.html'%}
+{% block content %}
+
+<div class="jumbotron  bg-dark " style="margin: -2% 0% -3% 0%;">
+    <div class="card mx-auto" style="width: 20rem;margin: -2% 0% -2% 0%;border-radius: 10%; ">
+        <div class="rec-circle mx-auto mt-2">
+            <img  src="{{individual.image.url}}" class="card-img-top " alt="">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-dark " >User Name: <span class="font-weight-bolder">{{individual.username}}</span></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Entry Date: <span  class="font-weight-bolder">{{individual.date_added}}</span></h6>
+          <h6 class="card-subtitle mb-2 text-muted">Email:  <span class="font-weight-bolder">{{individual.email}}</span></h6>
+          <p class="card-text text-danger ">Current Credit: <span  class="font-weight-bolder" >{{individual.currentCredit}}</span></p>
+          <a href="# " class="btn btn-primary mx-4 rounded-pill lead">Transfer to another User!</a>
+        </div>
+      </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'creditApp/base.html'%}
+{% load static %}
+
+{%block content %}
+
+  <div class="jumbotron  bg-dark " style="border-radius: 30px;padding: 0px 20px 0px 20px; margin: -1% 15% 0% 15% ;">
+    <div class="row">
+      <div class="col-md">
+
+    <table class="table " style="padding-top: 20px;">
+      <thead class="thead-dark">
+        <tr class="lead text-light">
+          <th scope="col">#</th>
+          <th scope="col">User Name</th>
+          <th scope="col">Credit</th>
+          <th scope="col">Email </th>
+          <th scope="col" >Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in user_details %}
+        <tr class="text-light font-weight-light">
+          <th scope="row" class="badge badge-light rounded-circle font-weight-bold ">{{user.id}}</th>
+          <td class="ml-1">{{user.username}}</td>
+          <td>{{user.currentCredit}}</td>
+          <td>{{user.email}}</td>
+          <td> <a class="btn btn-secondary btn-outline-light text-light rounded-pill" href="{% url 'creditApp:individual' user.id %}">View</a></td>
+
+          <!-- Remember that passing a template varible in a url tag does not need double-curly but just specify like the below eg => { url 'appname:name_of url_in_apps.urls' template_variable-->
+        </tr>
+        {% endfor %}
+
+   
+       
+      </tbody>
+    </table>
+    </div>
+  </div>
+  </div>
+
+
+{%endblock%}
