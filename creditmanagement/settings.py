@@ -78,10 +78,15 @@ WSGI_APPLICATION = 'creditmanagement.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd8c410m3m8tdga',
+        'HOST': 'ec2-52-73-199-211.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'USER':'iziwqeqmtmgwtt',
+        'PASSWORD': '242114ef26a5052f8f41d4510e2bacce8f426aa343a623c84214e57dae0ba132',
     }
 }
+
 
 
 # Password validation
