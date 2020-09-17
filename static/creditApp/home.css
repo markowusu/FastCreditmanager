@@ -1,0 +1,8 @@
+.container{
+    background-color: #fff;
+    background-image: url(stock3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}

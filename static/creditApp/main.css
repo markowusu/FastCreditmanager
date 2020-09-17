@@ -1,0 +1,214 @@
+/* 
+body {
+    margin: 0;
+    font-family: Nunito,sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #aab8c5;
+    text-align: left;
+    background-color: #343a40;
+} */
+/* 
+.wrapper {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+body[data-leftbar-theme="dark"] .left-side-menu {
+    background: #3a444e;
+}
+
+body[data-leftbar-theme="dark"] .left-side-menu {
+    background: #313a46;
+}
+.left-side-menu {
+    width: 260px;
+    z-index: 10;
+    background: linear-gradient(135deg,#8f75da 0,#727cf5 60%);
+    bottom: 0;
+    position: fixed;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    top: 0;
+    padding-top: 70px;
+    -webkit-box-shadow: 0 0 35px 0 rgba(49,57,66,.5);
+    box-shadow: 0 0 35px 0 rgba(49,57,66,.5);
+}
+
+
+.logo span.logo-lg {
+    display: block;
+    line-height: 70px;
+}
+
+text-center {
+    text-align: center !important;
+}
+
+[data-simplebar] {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+ 
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.simplebar-wrapper {
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+} */
+
+/* body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    /* font-size: 28px; /* Increased text to enable scrolling */
+    /* padding: 0px 10px; */
+  /* }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  } */ 
+
+
+
+  .custom_navbar{
+    box-shadow: 0px 2px 4px rgba(0,0,0, 0.5);
+    background-color: #fff;
+    position: fixed;
+    transform: translateY(0);
+    transition: transform 300ms 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 0ms 300ms, background-color 150ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 1;
+      top:0;
+      width: 100%;
+      display: flex;
+      z-index: 4;
+      box-sizing: border-box;
+      height: 70px;
+      color: rgba(3, 3, 3, 0.884);
+      justify-content: space-between;
+      flex: none;
+  }
+
+.banner{
+color: #fff;
+background-color: #212121;
+width: 100%;
+border-bottom: 1px solid #41414141;
+box-sizing: border-box;
+align-items: center;
+line-height: 1.4;
+height:  71px;
+padding: 0 24px;
+font-family: Roboto, sans-serif;
+text-align: center;
+}
+
+.brand-text{
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  align-items: center;
+  align-content: center;
+  padding-left: 10px;
+  padding-top: 50px;
+  margin-top: 30%;
+  
+
+}
+
+/* the home page  */
+
+.bg-color{
+
+background-color:   #fff;
+background-image: url(stockcrop.png);
+
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+
+
+
+/* user section */
+
+.custom-active{
+  color: 	 	 #004d26;
+  border-bottom: 2px solid  #008080;
+}
+
+.custom-view{
+  border-radius: 65%;
+}
+
+.rec-circle{
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+.rec-circle img{
+  width: auto;
+  height: 100%;
+   margin-left: -50px;
+}
+
+#id_trans_from,#id_trans_to,#id_amount_transferd {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+.transact-bg{
+  color:#fff;
+  margin-bottom: -2%;
+}
