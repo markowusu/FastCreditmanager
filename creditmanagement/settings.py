@@ -25,7 +25,7 @@ SECRET_KEY = 't5&)hfjs2qee^vwzs67*l8s6r&j8dn+g1zk%if&(5jfbvbf(m3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['afternoon-temple-34529.herokuapp.com','0.0.0.0']
+ALLOWED_HOSTS = ['fastcreditmanager.herokuapp.com','0.0.0.0','127.0.0.1',]
 
 
 # Application definition
