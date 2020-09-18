@@ -77,17 +77,23 @@ WSGI_APPLICATION = 'creditmanagement.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd8c410m3m8tdga',
+#         'HOST': 'ec2-52-73-199-211.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#         'USER':'iziwqeqmtmgwtt',
+#         'PASSWORD': '242114ef26a5052f8f41d4510e2bacce8f426aa343a623c84214e57dae0ba132',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd8c410m3m8tdga',
-        'HOST': 'ec2-52-73-199-211.compute-1.amazonaws.com',
-        'PORT': '5432',
-        'USER':'iziwqeqmtmgwtt',
-        'PASSWORD': '242114ef26a5052f8f41d4510e2bacce8f426aa343a623c84214e57dae0ba132',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'os.path.join(BASE_DIR,db.sqlite3)',
     }
-}
-
+}    
 
 
 # Password validation
@@ -137,3 +143,7 @@ MEDIA_URL = '/media/'
 # crispy setting
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# adding Heroku Postgresql
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
