@@ -5,7 +5,6 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script  type="text/javascript" src="{% static 'creditApp/main.js' %}"></script>
     <link rel="stylesheet" href="{% static 'creditApp/main.css'%}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     {% if '/' == request.path %}
@@ -15,20 +14,13 @@
     {% else %}
     <title>Users</title>
     {% endif %}
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'creditApp/apple-touch-icon.png'%}">
-    <link rel="  icon" type="image/png" sizes="32x32" href="{% static 'creditApp/favicon-32x32.png'%}">
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'creditApp/favicon.ico'%}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'creditApp/andriod-chrome-192x192.png'%}">
-    <link rel="icon" type="image/png" sizes="512x512" href="{% static 'creditApp/andriod-chrome-512x512.png'%}">
-    <!-- <link rel="manifest" href="{%static 'creditApp/site.webmanifest'%}"> -->
-    <link rel="manifest" href="{%static 'creditApp/site.webmanifest'%}">
 
-    <!-- <script
-        async
-        src="https://unpkg.com/pwacompat"
-        crossorigin="anonymous">
-    </script> -->
-  
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'creditApp/apple-touch-icon.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'creditApp/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'creditApp/favicon-16x16.png' %}">
+    <link rel=" shortcut icon" type="image/png"  href="{% static 'creditApp/favicon.ico' %}">
+    <link rel="manifest" href="{% static 'creditApp/site.webmanifest'%}">
+
 </head>
 
 <body>

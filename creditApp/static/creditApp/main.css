@@ -212,3 +212,10 @@ background-size: cover;
   color:#fff;
   margin-bottom: -2%;
 }
+
+.submit{
+  text-align: center;
+  color:red;
+  background: #fff;
+  font-weight: bold;
+}
