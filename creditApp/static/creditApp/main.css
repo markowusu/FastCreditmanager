@@ -177,18 +177,20 @@ background-size: cover;
 }
 
 .rec-circle{
-  display: inline-block;
-  position: relative;
+  /* display: inline-block;
+  position: relative; */
   width: 200px;
   height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
+  /* overflow: hidden; */
 
 }
+
 .rec-circle img{
   width: auto;
-  height: 100%;
-   margin-left: -50px;
+   /* margin-left: -50px; */
+   border-radius: 50%;
+   height: 100%;
+  
 }
 
 #id_trans_from,#id_trans_to,#id_amount_transferd {
