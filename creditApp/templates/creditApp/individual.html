@@ -10,8 +10,14 @@
           <h5 class="card-title text-dark " >User Name: <span class="font-weight-bolder">{{individual.username}}</span></h5>
           <h6 class="card-subtitle mb-2 text-muted">Entry Date: <span  class="font-weight-bolder">{{individual.date_added}}</span></h6>
           <h6 class="card-subtitle mb-2 text-muted">Email:  <span class="font-weight-bolder">{{individual.email}}</span></h6>
+          {% if individual.currentCredit <= 0 %}
           <p class="card-text text-danger ">Current Credit: <span  class="font-weight-bolder" >{{individual.currentCredit}}</span></p>
-          <a href="# " class="btn btn-primary mx-4 rounded-pill lead">Transfer to another User!</a>
+          {% else %}
+          <p class="card-text text-success ">Current Credit: <span  class="font-weight-bolder" >{{individual.currentCredit}}</span></p>
+          {%endif%}
+          <a href="{% url 'creditApp:users' %} " class="btn btn-primary mx-4 rounded-pill lead ">Go Back</a>
+          <a href="# " class="btn btn-primary mx-4 rounded-pill lead invisible">Transfer to another User!</a>
+
         </div>
       </div>
 

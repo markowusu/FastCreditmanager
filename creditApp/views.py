@@ -30,10 +30,9 @@ def  get_individual(request,id):
 
 def creatTransaction(request):
     form = transactForm()
-    
-    context={
-        'form':form
-    }
+    global is_error
+    is_error =0
+   
     if request.method == 'POST':
         form = transactForm(request.POST)
         # print("returning {}".format(request.POST.get('trans_from')))
@@ -82,8 +81,17 @@ def creatTransaction(request):
                 upadate_userto = User_table.objects.get(id =username_to)
                 upadate_userto.currentCredit = new_userto_credit
                 upadate_userto.save()
-
+                is_error=0 # sets the error value to false when there is no error.
+               
                 return redirect('/')
+           
+        is_error =1 # this is to set the error value to True when the names are the same.
+
+    context={
+        'form':form,
+        'is_error': is_error
+    }   
+    print(is_error)
     return render(request,'creditApp/transaction.html',context=context )
 
 

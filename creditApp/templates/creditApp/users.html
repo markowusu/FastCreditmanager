@@ -2,29 +2,29 @@
 {% load static %}
 
 {%block content %}
-
-  <div class="jumbotron  bg-dark " style="border-radius: 30px;padding: 0px 20px 0px 20px; margin: -1% 15% 0% 15% ;">
+  <div class="container bg-light">
+  <div class="jumbotron  bg-light " style="border-radius: 35px;padding: 0px 20px 0px 20px; margin: 3% 0% 0% 0%;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);z-index: 1;">
     <div class="row">
-      <div class="col-md">
+      <div class="col-md-8 " style="margin: 0% 17% 0% 10%; ">
 
-    <table class="table " style="padding-top: 20px;">
-      <thead class="thead-dark">
-        <tr class="lead text-light">
+    <table class="table " style="margin-top: 2%;" >
+      <thead class="thead-light" style="font-size: 2vw;padding-top: 1%;">
+        <tr class=" text-dark">
           <th scope="col">#</th>
           <th scope="col">User Name</th>
           <th scope="col">Credit</th>
-          <th scope="col">Email </th>
+          <!-- <th scope="col">Email </th> -->
           <th scope="col" >Action</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style="font-size: 2vw; font-family: 'Dancing Script', cursive;">
         {% for user in user_details %}
-        <tr class="text-light font-weight-light">
-          <th scope="row" class="badge badge-light rounded-circle font-weight-bold ">{{user.id}}</th>
+        <tr class="text-dark ">
+          <th scope="row" class="badge badge-dark rounded-circle  ">{{user.id}}</th>
           <td class="ml-1">{{user.username}}</td>
           <td>{{user.currentCredit}}</td>
-          <td>{{user.email}}</td>
-          <td> <a class="btn btn-secondary btn-outline-light text-light rounded-pill" href="{% url 'creditApp:individual' user.id %}">View</a></td>
+          <!-- <td style="font-weight: 14vw;">{{user.email}}</td> -->
+          <td> <a class="btn btn-secondary btn-outline-info text-light rounded-pill" href="{% url 'creditApp:individual' user.id %}">View</a></td>
 
           <!-- Remember that passing a template varible in a url tag does not need double-curly but just specify like the below eg => { url 'appname:name_of url_in_apps.urls' template_variable-->
         </tr>
@@ -37,6 +37,7 @@
     </div>
   </div>
   </div>
+</div>
 
 
 {%endblock%}

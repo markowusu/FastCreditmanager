@@ -4,9 +4,12 @@
 {% block content %}
 <div class="container">
 <div class="jumbotron bg-dark mr-4 ml-4 rounded-circle transact-bg" >
-    <p class="text-danger bg-light invisible"  onload = "submit(this)">Failed Try again!</p>
+   
     <div class="row row-transact">
         <div class="col-8">
+            {%  if is_error %}
+            <p class="btn text-light bg-danger lead btn-outline-light " style="margin: 1% -15% 0% 50%;font-weight: 5vw;">Not allowed</p>
+            {% endif %}
  <form  style="margin: 1% -15% 0% 50%;"  action=''  method="POST">
      {%csrf_token%}
       {{form|crispy}} 
